@@ -51,10 +51,24 @@ public class UserRegistrationRegex {
             System.out.println("Phone number invalid , enter correct number");
         }
     }
+    public static void getPassword() {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter your password");
+        String password= sc.next();
+        boolean check = Pattern.matches("[a-zA-z0-9!@#$%^&*()_+=-{};':<>,./?~`]{8,}", password);
+        if(check) {
+            user.setPassword(password);
+        }
+        else {
+            System.out.println("Password invalid , enter again ");
+            getPassword();
+        }
+    }
     public static void main(String[] args) {
        getFirstName();
        getLastName();
        getEmail();
        getPhoneNumber();
+       getPassword();
     }
 }

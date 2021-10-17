@@ -5,6 +5,15 @@ public class UserDetails {
     public String lastName;
     public String email;
     public String PhoneNumber;
+    public String password;
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
 
     public String getPhoneNumber() {
         return PhoneNumber;
@@ -36,6 +45,7 @@ public class UserDetails {
     public void setFirstName(String firstName) {
         FirstName = firstName;
     }
+
     @Override
     public String toString() {
         return "UserDetails{" +
@@ -43,6 +53,7 @@ public class UserDetails {
                 ", lastName='" + lastName + '\'' +
                 ", email='" + email + '\'' +
                 ", PhoneNumber='" + PhoneNumber + '\'' +
+                ", password='" + password + '\'' +
                 '}';
     }
 }
