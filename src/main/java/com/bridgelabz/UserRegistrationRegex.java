@@ -55,7 +55,7 @@ public class UserRegistrationRegex {
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter your password");
         String password= sc.next();
-        boolean check = Pattern.matches("[a-zA-z0-9!@#$%^&*()_+=-{};':<>,./?~`]{8,}", password);
+        boolean check = Pattern.matches("^(?=.*[A-Z])[a-zA-z0-9!@#$%^&*()_+=-{};':<>,./?~`]{8,}$", password);
         if(check) {
             user.setPassword(password);
         }
@@ -68,7 +68,6 @@ public class UserRegistrationRegex {
        getFirstName();
        getLastName();
        getEmail();
-       getPhoneNumber();
        getPassword();
     }
 }
