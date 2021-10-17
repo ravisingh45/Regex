@@ -3,7 +3,15 @@ package com.bridgelabz;
 public class UserDetails {
     public  String FirstName;
     public String lastName;
+    public String email;
 
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
     public String getLastName() {
         return lastName;
     }
@@ -24,6 +32,7 @@ public class UserDetails {
         return "UserDetails{" +
                 "FirstName='" + FirstName + '\'' +
                 ", lastName='" + lastName + '\'' +
+                ", email='" + email + '\'' +
                 '}';
     }
 }

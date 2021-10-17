@@ -28,6 +28,18 @@ public class UserRegistrationRegex {
             System.out.println("Last name start with Cap and has minimum 3 characters");
         }
     }
+    public static void getEmail(){
+        System.out.println("enter the email");
+        String email = scanner.next();
+        boolean check = Pattern.matches("^[a-z0-9.+-]+@[A-Za-z0-9.-]+.[A-Za-z]{2,6}$",email);
+        if (check){
+            user.setEmail(email);
+            System.out.println("thanks for your input");
+        }
+        else {
+            System.out.println("Email start with Cap and has minimum 3 characters");
+        }
+    }
     public static void main(String[] args) {
        getFirstName();
        getLastName();
