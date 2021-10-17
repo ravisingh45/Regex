@@ -12,14 +12,25 @@ public class UserRegistrationRegex {
         boolean check = Pattern.matches("[A-Z]{1}+[a-z]{2,}",firstName);
         if (check){
             user.setFirstName(firstName);
-            System.out.println("thanks for your input");
         }
         else {
             System.out.println("First name start with Cap and has minimum 3 characters");
         }
     }
-
+    public static void getLastName(){
+        System.out.println("enter the Last name");
+        String lastName = scanner.next();
+        boolean check = Pattern.matches("[A-Z]{1}+[a-z]{2,}",lastName);
+        if (check){
+            user.setLastName(lastName);
+        }
+        else {
+            System.out.println("Last name start with Cap and has minimum 3 characters");
+        }
+    }
     public static void main(String[] args) {
        getFirstName();
+       getLastName();
+       getEmail();
     }
 }
