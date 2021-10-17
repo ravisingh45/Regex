@@ -4,6 +4,15 @@ public class UserDetails {
     public  String FirstName;
     public String lastName;
     public String email;
+    public String PhoneNumber;
+
+    public String getPhoneNumber() {
+        return PhoneNumber;
+    }
+
+    public void setPhoneNumber(String phoneNumber) {
+        PhoneNumber = phoneNumber;
+    }
 
     public String getEmail() {
         return email;
@@ -33,6 +42,7 @@ public class UserDetails {
                 "FirstName='" + FirstName + '\'' +
                 ", lastName='" + lastName + '\'' +
                 ", email='" + email + '\'' +
+                ", PhoneNumber='" + PhoneNumber + '\'' +
                 '}';
     }
 }

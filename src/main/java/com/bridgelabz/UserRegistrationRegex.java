@@ -34,15 +34,27 @@ public class UserRegistrationRegex {
         boolean check = Pattern.matches("^[a-z0-9.+-]+@[A-Za-z0-9.-]+.[A-Za-z]{2,6}$",email);
         if (check){
             user.setEmail(email);
-            System.out.println("thanks for your input");
         }
         else {
             System.out.println("Email start with Cap and has minimum 3 characters");
+        }
+    }
+    public static void getPhoneNumber(){
+        System.out.println("enter the PhoneNumber");
+        String PhoneNumber = scanner.next();
+        boolean check = Pattern.matches("^[1-9][0-9][1-9]{10}$",PhoneNumber);
+        if (check){
+            user.setEmail(PhoneNumber);
+            System.out.println("thanks for your input");
+        }
+        else {
+            System.out.println("Phone number invalid , enter correct number");
         }
     }
     public static void main(String[] args) {
        getFirstName();
        getLastName();
        getEmail();
+       getPhoneNumber();
     }
 }
